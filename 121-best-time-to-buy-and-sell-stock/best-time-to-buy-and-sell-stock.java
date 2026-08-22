@@ -6,7 +6,10 @@ class Solution {
             if(prices[left]> prices[right]){
                 left = right;
             }
-            profit = Math.max(profit, prices[right]-prices[left]);
+            else{
+                profit = Math.max(profit, prices[right]-prices[left]);
+            }
+            
 
         }
         return profit;
