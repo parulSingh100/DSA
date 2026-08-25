@@ -18,8 +18,7 @@ class Solution {
         for(int num : set2){
             ans[i] = num;
             i++;
-        }   
-        
+        }
         return ans;
         
     }
