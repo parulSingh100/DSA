@@ -9,10 +9,8 @@ class Solution {
                     nums[i] = -1* (nums[i]);
                     k--;
                 }
-            min = Math.min(min,Math.abs(nums[i]));   
-            }
-            for(int i = 0; i < nums.length; i++){
                 sum += nums[i];
+            min = Math.min(min,Math.abs(nums[i]));   
             }
             
             k = k % 2;
