@@ -10,6 +10,9 @@ class Solution {
             else if(bills[i]==10){
                 ten++;
                 five--;
+                if(five<0){
+                    return false;
+                }
             }
             else{
                 twenty++;
