@@ -22,10 +22,11 @@ class Solution {
                 }else{
                     five = five - 3;
                 }
-            }
-            if(five<0||ten<0||twenty<0){
+                 if(five<0||ten<0){
                 return false;
             }
+            }
+           
         }
     return true;
     }
