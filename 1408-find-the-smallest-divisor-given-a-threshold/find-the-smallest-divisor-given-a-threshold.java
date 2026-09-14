@@ -15,7 +15,9 @@ class Solution {
             
             for(int i = 0; i < nums.length; i++){
                 sum+= Math.ceil((double)nums[i]/mid);
-                
+                if(sum>threshold){
+                    break;
+                }
             }
             if(sum<=threshold){
                 target = mid;
