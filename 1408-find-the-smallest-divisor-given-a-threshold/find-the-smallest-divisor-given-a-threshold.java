@@ -1,8 +1,13 @@
 class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
-        Arrays.sort(nums);
+        int max = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(max<nums[i]){
+                max = nums[i];
+            }
+        }
         int left = 0;
-        int right = nums[nums.length - 1];
+        int right = max;
         int target = 0;
         while(left<=right){
             int mid = left + (right - left)/2;
@@ -10,6 +15,7 @@ class Solution {
             
             for(int i = 0; i < nums.length; i++){
                 sum+= Math.ceil((double)nums[i]/mid);
+                
             }
             if(sum<=threshold){
                 target = mid;
