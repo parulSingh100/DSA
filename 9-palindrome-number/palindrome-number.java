@@ -3,17 +3,16 @@ class Solution {
         if(x<0){
             return false;
         }
-        String s = String.valueOf(x);
-        int left = 0;
-        int right = s.length()-1;
-        while(left<=right){
-            if(s.charAt(left)!=s.charAt(right)){
-                return false;
-            }else{
-                left++;
-                right--;
-            }
+        int original = x;
+        int reverse = 0;
+        while(x>0){
+            int digit = x % 10;
+            reverse = reverse * 10 + digit;
+            x = x / 10;
         }
-    return true;    
+        if(original==reverse){
+            return true;
+        }
+        return false;
     }
 }
